@@ -3,6 +3,7 @@ import axios from "axios";
 import { Container, Header, Icon } from "semantic-ui-react";
 
 import "./App.css";
+import Loading from "./components/Loading";
 import ApodTitle from "./components/ApodTitle";
 import ApodCard from "./components/ApodCard";
 import DateSelector from "./components/DateSelector";
@@ -34,24 +35,11 @@ function App() {
     setDate(event.target.value);
   };
 
-  if (!data) {
-    return (
-      <Container text textAlign="center">
-        <Header size="huge" block>
-          <div>
-            <Icon loading name="spinner" />
-            <Header.Content>Loading...</Header.Content>
-          </div>
-        </Header>
-      </Container>
-    );
-  }
-
   return (
     <Container text textAlign="center">
       <ApodTitle />
       <DateSelector handleChange={handleChange} />
-      <ApodCard data={data} />
+      {data ? <ApodCard data={data} /> : <Loading />}
     </Container>
   );
 }
