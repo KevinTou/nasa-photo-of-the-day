@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Container, Header, Icon } from "semantic-ui-react";
 
 import "./App.css";
 import ApodTitle from "./components/ApodTitle";
@@ -34,15 +35,24 @@ function App() {
   };
 
   if (!data) {
-    return <div className="loading">Loading...</div>;
+    return (
+      <Container text textAlign="center">
+        <Header size="huge" block>
+          <div>
+            <Icon loading name="spinner" />
+            <Header.Content>Loading...</Header.Content>
+          </div>
+        </Header>
+      </Container>
+    );
   }
 
   return (
-    <div className="App">
+    <Container text textAlign="center">
       <ApodTitle />
       <DateSelector handleChange={handleChange} />
       <ApodCard data={data} />
-    </div>
+    </Container>
   );
 }
 

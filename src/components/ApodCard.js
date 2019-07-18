@@ -1,22 +1,23 @@
 import React from "react";
+import { Segment, Header, Image } from "semantic-ui-react";
 
 const ApodCard = ({ data }) => {
   const getMedia = () => {
     if (data.media_type === "image") {
-      return <img src={data.url} alt="temp" width="500" height="500" />;
+      return <Image src={data.url} alt="temp" />;
     } else if (data.media_type === "video") {
-      return <iframe src={data.url} width="500" height="500" title="temp" />;
+      return <iframe src={data.url} width="500" height="300" title="temp" />;
     }
   };
 
   return (
-    <section className="apod-card">
-      <h2 className="apod-title">{data.title}</h2>
+    <Segment className="apod-card">
+      <Header>{data.title}</Header>
       {getMedia()}
-      <p className="apod-explanation">
+      <Segment>
         <strong>Explanation</strong>: {data.explanation}
-      </p>
-    </section>
+      </Segment>
+    </Segment>
   );
 };
 
