@@ -13,6 +13,7 @@ const ApodCard = ({ data }) => {
   return (
     <Segment className="apod-card">
       <Header>{data.title}</Header>
+      <Header sub>Date: {data.date}</Header>
       {getMedia()}
       <Segment>
         <strong>Explanation</strong>: {data.explanation}
