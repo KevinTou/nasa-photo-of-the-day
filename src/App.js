@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Container, Header, Icon } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 
 import "./App.css";
 import Loading from "./components/Loading";
