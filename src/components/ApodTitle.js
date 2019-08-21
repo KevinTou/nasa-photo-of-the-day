@@ -7,7 +7,7 @@ const ApodTitle = () => {
       <Header as="h1" block>
         <div>
           <Icon name="space shuttle" />
-          <Header.Content>A.P.O.D.</Header.Content>
+          <Header.Content>APOD</Header.Content>
         </div>
       </Header>
       <Segment>
