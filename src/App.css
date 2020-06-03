@@ -1,33 +1,18 @@
-.App {
-  text-align: center;
+html,
+body {
+  font-size: 100%;
+  background-image: url("https://images.unsplash.com/photo-1457327289196-f38b88d97147?ixlib=rb-1.2.1&auto=format&fit=crop&w=1652&q=80");
+  background-attachment: fixed;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  margin-top: 1.2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.date {
+  max-width: 30%;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.apod-card {
+  margin-bottom: 1.2rem !important;
 }

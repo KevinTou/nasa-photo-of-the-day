@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> should match snapshot 1`] = `
+<div
+  className="ui text center aligned container"
+>
+  <div
+    className="ui huge block header"
+  >
+    <div>
+      <i
+        aria-hidden="true"
+        className="spinner loading icon"
+        onClick={[Function]}
+      />
+      <div
+        className="content"
+      >
+        Loading...
+      </div>
+    </div>
+  </div>
+</div>
+`;
